@@ -54,3 +54,10 @@ format exists to serve. Callers who know their values are small coerce with
 - `decodeWithChecksum(text): bigint` — validates the trailing checksum; throws `DecodeError` on mismatch.
 - `SYMBOLS` — the 32-character canonical alphabet.
 - `DecodeError` — thrown on any decode failure.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
