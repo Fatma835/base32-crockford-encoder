@@ -1,6 +1,6 @@
 {
   "name": "base32-crockford-encoder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes and decodes Crockford Base32 with checksum and decode-error symbols for human-readable identifiers.",
   "type": "module",
   "main": "src/index.js",
